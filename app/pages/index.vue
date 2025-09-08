@@ -31,12 +31,14 @@
 </template>
 
 <script setup>
-import { useBaseStore } from '~/store/base';
-import { useOperationStore } from '~/store/operation';
+import { useBaseStore } from "~/store/base";
+import { useOperationStore } from "~/store/operation";
 
+const response = await $fetch("/first");
+console.log("resApi" , response);
 
 const baseStore = useBaseStore();
-const operationStore = useOperationStore()
+const operationStore = useOperationStore();
 
 const { $hello } = useNuxtApp();
 $hello("FiNiK");
